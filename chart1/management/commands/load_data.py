@@ -21,7 +21,7 @@ class Command(BaseCommand):
         
         for row in Wind_Rotor:
             #convert ISO date  to date 
-            dt=dt=row['Dat/Zeit'].date()
+            dt=row['Dat/Zeit'].date()
             Turbit.objects.get_or_create(dt=dt,wind=row['Wind'],power=row['Leistung'])
         
             
